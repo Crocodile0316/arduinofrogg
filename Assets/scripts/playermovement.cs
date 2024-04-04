@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playermovement : MonoBehaviour
 {
+    private forcetest ft;
     [Header("Movement")]
     public float moveSpeed;
     public Camera mainCamera;
@@ -36,6 +37,7 @@ public class playermovement : MonoBehaviour
 
     private void Start()
     {
+        ft = GetComponent<forcetest>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 

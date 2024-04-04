@@ -4,9 +4,10 @@ using System.Threading;
 
 public class forcetest : MonoBehaviour
 {
+    public float Value;
     Thread IOThread = new Thread(DataThread);
     private static SerialPort sp;
-    private static string incomingMsg = "";
+    public static string incomingMsg = "";
     private static string outgoingMsg = "";
 
     private static void DataThread()
@@ -42,7 +43,8 @@ public class forcetest : MonoBehaviour
     {
         if (incomingMsg != "")
         {
-            Debug.Log(incomingMsg);
+            Value=float.Parse(incomingMsg);
+            Debug.Log(Value);
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
             outgoingMsg = "0";
