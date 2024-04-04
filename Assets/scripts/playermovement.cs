@@ -54,21 +54,7 @@ public class playermovement : MonoBehaviour
 
         MyInput();
         SpeedControl();
-        if (ft.Value!=0&&fttrue&&readyToJump)
-        {
-            fttrue = false;
-            ftpower = ft.Value;
-            readyToJump = false;
-
-            Invoke(nameof(ResetJump), jumpCooldown);
-        }
-        else
-        {
-            ftJump();
-            fttrue = true;
-            Invoke(nameof(Resetftpower), jumpCooldown);
-
-        }
+        
         // handle drag
         if (grounded)
             rb.drag = groundDrag;
