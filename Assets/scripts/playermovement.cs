@@ -5,6 +5,8 @@ using UnityEngine;
 public class playermovement : MonoBehaviour
 {
     private forcetest ft;
+    public bool fttrue;
+    public float ftpower;
     [Header("Movement")]
     public float moveSpeed;
     public Camera mainCamera;
@@ -42,6 +44,7 @@ public class playermovement : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
+        
     }
 
     private void Update()
@@ -51,7 +54,21 @@ public class playermovement : MonoBehaviour
 
         MyInput();
         SpeedControl();
+        if (ft.Value!=0&&fttrue&&readyToJump)
+        {
+            fttrue = false;
+            ftpower = ft.Value;
+            readyToJump = false;
 
+            Invoke(nameof(ResetJump), jumpCooldown);
+        }
+        else
+        {
+            ftJump();
+            fttrue = true;
+            Invoke(nameof(Resetftpower), jumpCooldown);
+
+        }
         // handle drag
         if (grounded)
             rb.drag = groundDrag;
@@ -105,10 +122,22 @@ public class playermovement : MonoBehaviour
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
     }
+    private void ftJump()
+    {
+        if (!grounded && !readyToJump)
+        {
+            return;
+        }
+        Vector3 cameraForward = mainCamera.transform.forward;
+        Vector3 cameraUp = mainCamera.transform.up;
 
+        Vector3 jumpDirection = (cameraForward + cameraUp).normalized;
+
+        rb.velocity = jumpDirection * jumpForce*ftpower/100;
+    }
     private void Jump()
     {
-        if (!grounded)
+        if (!grounded&&!readyToJump)
         {
             return;
         }
@@ -122,5 +151,9 @@ public class playermovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+    private void Resetftpower()
+    {
+        ftpower=0;
     }
 }
