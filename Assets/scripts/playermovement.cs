@@ -9,6 +9,7 @@ public class playermovement : MonoBehaviour
     
     public bool fttrue;
     public float ftpower;
+    
     [Header("Movement")]
     public float moveSpeed;
     public Camera mainCamera;
@@ -72,21 +73,27 @@ public class playermovement : MonoBehaviour
     {
         MovePlayer();
     }
+    private void LateUpdate()
+    {
+        // when to jump (arduino)
+        if (ftpower > 1 && readyToJump && grounded )
+        {
+            
+            readyToJump = false;
+            ftJump();
+            Invoke(nameof(ResetJump), jumpCooldown);
+        }
+    }
+
 
     private void MyInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
-        // jump counting
-        if (ftpower > 1 && readyToJump)
-        {
-            readyToJump = false;
-            ftJump();
-            Invoke(nameof(ResetJump), jumpCooldown);
-        }
+        
 
 
-        // when to jump
+        // when to jump (keyboard)
         if (Input.GetKey(jumpKey) && readyToJump )
         {
             readyToJump = false;
