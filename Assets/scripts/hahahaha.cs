@@ -95,7 +95,7 @@ public class Hahahaha : MonoBehaviour
         {
             lastftpower = ftpower;
 
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(3f);
         }
     }
 

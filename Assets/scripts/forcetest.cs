@@ -12,7 +12,7 @@ public class forcetest : MonoBehaviour
 
     private static void DataThread()
     {
-        sp = new SerialPort("COM3", 9600);
+        sp = new SerialPort("COM4", 9600);
         sp.Open();
 
         while (true)

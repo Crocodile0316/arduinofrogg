@@ -12,7 +12,7 @@ public class turningtest : MonoBehaviour
 
     private static void DataThread()
     {
-        sp = new SerialPort("COM5", 9600);
+        sp = new SerialPort("COM4", 9600);
         sp.Open();
 
         while (true)
