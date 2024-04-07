@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class playermovement : MonoBehaviour
 {
-    private forcetest ft;
+    GameObject ftobj;
+    //private forcetest ft;
+    
     public bool fttrue;
     public float ftpower;
     [Header("Movement")]
@@ -39,8 +41,9 @@ public class playermovement : MonoBehaviour
 
     private void Start()
     {
-        ft = GetComponent<forcetest>();
+        ftobj = GameObject.Find("forcetest");
         rb = GetComponent<Rigidbody>();
+        //ft = GetComponent<forcetest>();
         rb.freezeRotation = true;
 
         readyToJump = true;
@@ -49,6 +52,9 @@ public class playermovement : MonoBehaviour
 
     private void Update()
     {
+        ftpower = ftobj.GetComponent<forcetest>().Value;
+        
+
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
 
@@ -71,6 +77,14 @@ public class playermovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+        // jump counting
+        if (ftpower > 1 && readyToJump)
+        {
+            readyToJump = false;
+            ftJump();
+            Invoke(nameof(ResetJump), jumpCooldown);
+        }
+
 
         // when to jump
         if (Input.GetKey(jumpKey) && readyToJump )
@@ -119,7 +133,7 @@ public class playermovement : MonoBehaviour
 
         Vector3 jumpDirection = (cameraForward + cameraUp).normalized;
 
-        rb.velocity = jumpDirection * jumpForce*ftpower/100;
+        rb.velocity = jumpDirection * jumpForce * ftpower/100;
     }
     private void Jump()
     {
