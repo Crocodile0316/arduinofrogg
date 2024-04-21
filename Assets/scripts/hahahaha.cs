@@ -95,7 +95,7 @@ public class Hahahaha : MonoBehaviour
         {
             lastftpower = ftpower;
 
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1.5f);
         }
     }
 
@@ -155,7 +155,7 @@ public class Hahahaha : MonoBehaviour
 
         Vector3 jumpDirection = (cameraForward + cameraUp).normalized;
 
-        rb.velocity = jumpDirection * jumpForce * lastftpower / 100;
+        rb.velocity = jumpDirection * jumpForce * lastftpower / 400;
     }
     private void Jump()
     {
