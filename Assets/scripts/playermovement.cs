@@ -42,7 +42,7 @@ public class playermovement : MonoBehaviour
 
     private void Start()
     {
-        ftobj = GameObject.Find("forcetest");
+        ftobj = GameObject.Find("forceitem");
         rb = GetComponent<Rigidbody>();
         //ft = GetComponent<forcetest>();
         rb.freezeRotation = true;
@@ -53,7 +53,7 @@ public class playermovement : MonoBehaviour
 
     private void Update()
     {
-        ftpower = ftobj.GetComponent<forcetest>().Value;
+        ftpower = ftobj.GetComponent<forceeee>().sensorValue1;
         
 
         // ground check

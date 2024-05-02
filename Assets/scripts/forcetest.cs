@@ -12,7 +12,7 @@ public class forcetest : MonoBehaviour
 
     private static void DataThread()
     {
-        sp = new SerialPort("COM6", 9600);
+        sp = new SerialPort("COM4", 9600);
         sp.Open();
 
         while (true)
@@ -43,7 +43,7 @@ public class forcetest : MonoBehaviour
     {
         if (incomingMsg != "")
         {
-            Value=float.Parse(incomingMsg);
+            Value = float.Parse(incomingMsg);
             Debug.Log(Value);
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))

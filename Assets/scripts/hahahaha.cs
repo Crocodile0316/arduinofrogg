@@ -43,7 +43,7 @@ public class Hahahaha : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Savepower());
-        ftobj = GameObject.Find("forcetest");
+        ftobj = GameObject.Find("forceitem");
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -53,7 +53,7 @@ public class Hahahaha : MonoBehaviour
 
     private void Update()
     {
-        ftpower = ftobj.GetComponent<forcetest>().Value;
+        ftpower = ftobj.GetComponent<forceeee>().sensorValue1;
         
 
         // ground check
@@ -95,7 +95,7 @@ public class Hahahaha : MonoBehaviour
         {
             lastftpower = ftpower;
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.7f);
         }
     }
 
