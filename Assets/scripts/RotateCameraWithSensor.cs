@@ -4,7 +4,7 @@ using Cinemachine;
 public class RotateCameraWithSensor : MonoBehaviour
 {
     public Transform targetObject; // Object for the camera to rotate around
-    public float angleRange = 135.0f; // Half-range of camera angles
+    public float angleRange = 1.0f; // Half-range of camera angles: default = 135.0f
     public float minSensorValue = 0; // Minimum value received from the sensor
     public float maxSensorValue = 1023; // Maximum value received from the sensor
     GameObject sv2;
