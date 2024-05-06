@@ -6,6 +6,14 @@ public class Hahahaha : MonoBehaviour
 {
     GameObject ftobj;
     //private forcetest ft;
+    public enum SensorType
+    {
+        SensorValue1,
+        SensorValue2,
+        SensorValue3,
+        SensorValue4
+    }
+    public SensorType sensorToUse; // Variable to choose which sensor value to use for ftpower
 
     public bool fttrue;
     public float ftpower;
@@ -53,8 +61,22 @@ public class Hahahaha : MonoBehaviour
 
     private void Update()
     {
-        ftpower = ftobj.GetComponent<forceeee>().sensorValue1;
-        
+        switch (sensorToUse)
+        {
+            case SensorType.SensorValue1:
+                ftpower = ftobj.GetComponent<forceeee>().sensorValue1;
+                break;
+            case SensorType.SensorValue2:
+                ftpower = ftobj.GetComponent<forceeee>().sensorValue2;
+                break;
+            case SensorType.SensorValue3:
+                ftpower = ftobj.GetComponent<forceeee>().sensorValue3;
+                break;
+            case SensorType.SensorValue4:
+                ftpower = ftobj.GetComponent<forceeee>().sensorValue4;
+                break;
+        }
+
 
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
@@ -78,11 +100,11 @@ public class Hahahaha : MonoBehaviour
         // when to jump (arduino)
         if (ftpower == 0 && readyToJump && grounded)
         {
-            
-            
-             ftJump();
-             readyToJump = false;
-             Invoke(nameof(ResetJump), jumpCooldown);
+
+
+            ftJump();
+            readyToJump = false;
+            Invoke(nameof(ResetJump), jumpCooldown);
             Resetftpower();
 
 
