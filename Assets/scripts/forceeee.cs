@@ -4,7 +4,7 @@ using System.IO.Ports;
 public class forceeee : MonoBehaviour
 {
     SerialPort serialPort;
-    string portName = "COM4"; // Change this to match your Arduino's port
+    string portName = "COM3"; // Change this to match your Arduino's port
     int baudRate = 9600; // Match with Arduino's baud rate
 
     public float sensorValue1; // Public float to store sensorValue1 T1

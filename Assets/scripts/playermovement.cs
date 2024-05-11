@@ -71,7 +71,7 @@ public class playermovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
+       
     }
     private void LateUpdate()
     {
@@ -135,8 +135,9 @@ public class playermovement : MonoBehaviour
         {
             return;
         }
-        Vector3 cameraForward = mainCamera.transform.forward;
-        Vector3 cameraUp = mainCamera.transform.up;
+        
+        Vector3 cameraForward = orientation.transform.forward;
+        Vector3 cameraUp = orientation.transform.up;
 
         Vector3 jumpDirection = (cameraForward + cameraUp).normalized;
 
