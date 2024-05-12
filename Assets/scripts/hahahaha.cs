@@ -177,7 +177,7 @@ public class Hahahaha : MonoBehaviour
 
         Vector3 jumpDirection = (cameraForward + cameraUp).normalized;
 
-        rb.velocity = jumpDirection * jumpForce * lastftpower / 300;
+        rb.velocity = jumpDirection * jumpForce * lastftpower / 500;
     }
     private void Jump()
     {
