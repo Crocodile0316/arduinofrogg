@@ -15,18 +15,28 @@ public class DeadEvent : MonoBehaviour
         if (other.gameObject.name == "player1")
         {
             Debug.Log("Enter1");
-            
-            player1.transform.position = new Vector3(5.356702f, 5.58f, 5.245076f);
-          //  Invoke(nameof(CloseScreen), respawntime);
+
+            Invoke(nameof(player1return), respawntime);
+            //player1.transform.position = new Vector3(5.356702f, 5.58f, 5.245076f);
+            //  Invoke(nameof(CloseScreen), respawntime);
         }
 
         if (other.gameObject.name == "player2")
         {
             Debug.Log("Enter2");
 
-            player2.transform.position = new Vector3(6.82f, 5.568f, 3.44f);
+            Invoke(nameof(player2return), respawntime);
             //  Invoke(nameof(CloseScreen), respawntime);
         }
     }
 
+    void player1return()
+    {
+        player1.transform.position = new Vector3(5.356702f, 5.58f, 5.245076f);
+    }
+
+    void player2return()
+    {
+        player2.transform.position = new Vector3(6.82f, 5.568f, 3.44f);
+    }
 }
