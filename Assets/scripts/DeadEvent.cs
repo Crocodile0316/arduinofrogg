@@ -8,6 +8,7 @@ public class DeadEvent : MonoBehaviour
    
     public GameObject Deadarea;
     public float respawntime;
+    public float respawntime1;
     public GameObject player1;
     public GameObject player2;
     public Deadanim deadanim;
@@ -42,8 +43,8 @@ public class DeadEvent : MonoBehaviour
         if (other.gameObject.name == "player2")
         {
             Debug.Log("Enter2");
-            StartCoroutine(deadanim.HandleDeadScreen(respawntime));
-            Invoke(nameof(player2return), respawntime);
+            StartCoroutine(deadanim.HandleDeadScreen1(respawntime1));
+            Invoke(nameof(player2return), respawntime1);
             //  Invoke(nameof(CloseScreen), respawntime);
         }
     }

@@ -29,14 +29,5 @@ public class AudioManager : MonoBehaviour
     {
         SFXSource.PlayOneShot(clip);
     }
-    void Update()
-    {
-        // Check if the first object is set active
-        if (DeadScreen.activeSelf)
-        {
-            musicSource.clip = background;
-            musicSource.Pause();
-        }
-
-    }
+    
 }
