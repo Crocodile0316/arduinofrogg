@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.UI;
+using TMPro;
 
 public class Hahahaha : MonoBehaviour
 {
     GameObject ftobj;
+    public TextMeshPro Forcetext;
     //private forcetest ft;
     public enum SensorType
     {
@@ -77,7 +80,7 @@ public class Hahahaha : MonoBehaviour
                 break;
         }
 
-
+        forcetext();
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
 
@@ -200,5 +203,10 @@ public class Hahahaha : MonoBehaviour
     {
         ftpower = 0;
         lastftpower = 0;
+    }
+
+    private void forcetext()
+    {
+        Forcetext.text = lastftpower.ToString();
     }
 }
