@@ -50,14 +50,14 @@ public class Hahahaha : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
-
+    public bool clearstage;
     private void Start()
     {
         StartCoroutine(Savepower());
         ftobj = GameObject.Find("forceitem");
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
+        clearstage = false;
         readyToJump = true;
 
     }
@@ -80,7 +80,15 @@ public class Hahahaha : MonoBehaviour
                 break;
         }
 
-        forcetext();
+        if (lastftpower<500)
+        {
+            lastftpower = 0;
+        }
+        if (lastftpower >1000)
+        {
+            lastftpower = 1000;
+        }
+            forcetext();
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
 
@@ -180,7 +188,7 @@ public class Hahahaha : MonoBehaviour
 
         Vector3 jumpDirection = (cameraForward + cameraUp).normalized;
 
-        rb.velocity = jumpDirection * jumpForce * lastftpower / 500;
+        rb.velocity = jumpDirection *  lastftpower / 50;
     }
     private void Jump()
     {
@@ -207,6 +215,13 @@ public class Hahahaha : MonoBehaviour
 
     private void forcetext()
     {
-        Forcetext.text = lastftpower.ToString();
+        if (lastftpower == 0)
+        {
+            Forcetext.text = lastftpower.ToString();
+        }
+        else
+        {
+            Forcetext.text = ((lastftpower - 500) / 10).ToString("F0");
+        }
     }
 }
