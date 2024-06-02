@@ -4670,7 +4670,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -11216,7 +11216,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -12245,47 +12245,47 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 138.41
+      value: 163.70473
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.41
+      value: 26.45552
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.56
+      value: 19.542454
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.12019186
+      value: 0.9873687
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.155498
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9927507
+      value: 0.030017545
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.004727382
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -17.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -166.194
+      value: 3.483
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c9b16bec705ede4d8fb45b0ef58f2de,
         type: 3}
@@ -20842,7 +20842,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -31304,7 +31304,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -43298,7 +43298,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -45241,7 +45241,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
