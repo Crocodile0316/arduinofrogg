@@ -23,6 +23,33 @@ public class DeadEvent : MonoBehaviour
         clear = GetComponent<Hahahaha>();
         timer = GetComponent<timer>();
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            player1return();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            player1return2();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            player1return3();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            player2return();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            player2return2();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            player2return3();
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
