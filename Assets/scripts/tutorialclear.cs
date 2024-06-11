@@ -16,7 +16,7 @@ public class tutorialclear : MonoBehaviour
     public bool py2=false;
     private void Update()
     {
-        
+        Changetag();
     }
 
     void OnTriggerEnter(Collider other)
