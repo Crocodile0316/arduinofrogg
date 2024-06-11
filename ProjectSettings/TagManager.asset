@@ -6,6 +6,7 @@ TagManager:
   tags:
   - clearstage1
   - clearstage2
+  - clearstage0
   layers:
   - Default
   - TransparentFX

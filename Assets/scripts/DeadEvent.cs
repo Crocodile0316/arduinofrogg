@@ -70,7 +70,7 @@ public class DeadEvent : MonoBehaviour
 
         if (other.gameObject.name == "player1" && player1.tag == "clearstage1")
         {
-            Debug.Log("Enter1");
+            Debug.Log("Enter2");
             StartCoroutine(deadanim.HandleDeadScreen(respawntime));
             Invoke(nameof(player1return2), respawntime);
             //player1.transform.position = new Vector3(5.356702f, 5.58f, 5.245076f);
