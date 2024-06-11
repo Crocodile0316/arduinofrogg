@@ -64,6 +64,12 @@ public class Hahahaha : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+   
+
         switch (sensorToUse)
         {
             case SensorType.SensorValue1:
