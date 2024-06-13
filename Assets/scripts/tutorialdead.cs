@@ -8,12 +8,10 @@ public class tutorialdead : MonoBehaviour
     public GameObject deadarea;
     public GameObject player1;
     public GameObject player2;
-    public GameObject G1;
-    public GameObject G2;
     public Deadanim deadanim;
     public float respawntime;
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (deadanim == null)
         {
@@ -30,19 +28,19 @@ public class tutorialdead : MonoBehaviour
         if (other.gameObject.name == "player2")
         {
             Debug.Log("tnter2");
-            StartCoroutine(deadanim.HandleDeadScreen(respawntime));
+            StartCoroutine(deadanim.HandleDeadScreen1(respawntime));
             Invoke(nameof(player2return), respawntime);
         }
     }
     
     public void player1return()
     {
-        G1.transform.position = new Vector3(-160.09f, -2.5f, 219.22f);
+        player1.transform.position = new Vector3(-160.09f, -2.5f, 219.22f);
     }
 
     public void player2return()
     {
-        G2.transform.position = new Vector3(-160.0295f, -2.54f, 201.82f);
+        player2.transform.position = new Vector3(-160.0295f, -2.54f, 201.82f);
     }
 
 }
