@@ -61839,6 +61839,7 @@ MonoBehaviour:
   player2: {fileID: 1185269608}
   gm1: {fileID: 551604319}
   gm2: {fileID: 742158761}
+  timer: {fileID: 1331207022}
   clearstage0: clearstage0
   py1: 0
   py2: 0
@@ -67315,7 +67316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1331207023
 RectTransform:
   m_ObjectHideFlags: 0

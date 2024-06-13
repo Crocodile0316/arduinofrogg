@@ -120,7 +120,7 @@ public class DeadEvent : MonoBehaviour
     }
     void player1return3()
     {
-        player1.transform.position = new Vector3(151.57f, 29.74f, 43.56f);
+        player1.transform.position = new Vector3(183.55f, 18.5f, 33.65f);
     }
 
     void player2return()
@@ -135,7 +135,7 @@ public class DeadEvent : MonoBehaviour
     }
     void player2return3()
     {
-        player2.transform.position = new Vector3(151.57f, 29.74f, 43.56f);
+        player2.transform.position = new Vector3(183.55f, 18.5f, 33.65f);
 
     }
 }

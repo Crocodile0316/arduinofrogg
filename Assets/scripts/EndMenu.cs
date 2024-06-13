@@ -7,6 +7,13 @@ public class EndMenu : MonoBehaviour
     // Assign the button through the inspector
     public Button restartButton;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            RestartScene();
+        }
+    }
     void Start()
     {
         // Make sure the button is assigned

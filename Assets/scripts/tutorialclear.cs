@@ -9,7 +9,7 @@ public class tutorialclear : MonoBehaviour
     public GameObject player2;
     public GameObject gm1;
     public GameObject gm2;
-    private timer timer;
+    public GameObject timer;
     private Hahahaha clear;
     public string clearstage0;
     public bool py1=false;
@@ -47,6 +47,7 @@ public class tutorialclear : MonoBehaviour
             gm2.transform.position = new Vector3(6.82f, 5.568f, 3.44f);
             py1 = false;
             py2 = false;
+            timer.SetActive(true);
         }
     }
 }
